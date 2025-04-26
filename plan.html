@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get to Know Me Better!</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Let’s Get to Know Each Other Better!</h1>
+    <p class="quiz-instructions">Answer the questions and let’s see how well we know each other!</p>
+    
+    <div id="quiz">
+      <div class="question" id="question-1">
+        <p>1. What’s your ideal weekend?</p>
+        <input type="radio" id="q1a" name="q1" value="Road trip">
+        <label for="q1a">Road trip</label><br>
+        <input type="radio" id="q1b" name="q1" value="Cozy movie night">
+        <label for="q1b">Cozy movie night</label><br>
+        <input type="radio" id="q1c" name="q1" value="Outdoors adventure">
+        <label for="q1c">Outdoors adventure</label><br>
+      </div>
+      
+      <div class="question" id="question-2">
+        <p>2. If you could travel anywhere right now, where would it be?</p>
+        <input type="radio" id="q2a" name="q2" value="Paris">
+        <label for="q2a">Paris</label><br>
+        <input type="radio" id="q2b" name="q2" value="Tokyo">
+        <label for="q2b">Tokyo</label><br>
+        <input type="radio" id="q2c" name="q2" value="Bali">
+        <label for="q2c">Bali</label><br>
+      </div>
+      
+      <div class="question" id="question-3">
+        <p>3. What’s your go-to comfort food?</p>
+        <input type="radio" id="q3a" name="q3" value="Pizza">
+        <label for="q3a">Pizza</label><br>
+        <input type="radio" id="q3b" name="q3" value="Chocolate">
+        <label for="q3b">Chocolate</label><br>
+        <input type="radio" id="q3c" name="q3" value="Ice cream">
+        <label for="q3c">Ice cream</label><br>
+      </div>
+      
+      <div class="question" id="question-4">
+        <p>4. What’s your favorite way to relax?</p>
+        <input type="radio" id="q4a" name="q4" value="Reading a book">
+        <label for="q4a">Reading a book</label><br>
+        <input type="radio" id="q4b" name="q4" value="Watching movies">
+        <label for="q4b">Watching movies</label><br>
+        <input type="radio" id="q4c" name="q4" value="Taking a walk">
+        <label for="q4c">Taking a walk</label><br>
+      </div>
+
+      <div class="question" id="question-5">
+        <p>5. What’s your dream date idea?</p>
+        <input type="radio" id="q5a" name="q5" value="Picnic in the park">
+        <label for="q5a">Picnic in the park</label><br>
+        <input type="radio" id="q5b" name="q5" value="Dinner at a fancy restaurant">
+        <label for="q5b">Dinner at a fancy restaurant</label><br>
+        <input type="radio" id="q5c" name="q5" value="A surprise getaway">
+        <label for="q5c">A surprise getaway</label><br>
+      </div>
+
+      <button id="submit-btn" onclick="submitQuiz()">Submit Answers</button>
+    </div>
+    
+    <div id="result" class="hidden">
+      <h2>Thanks for playing!</h2>
+      <p>We’ve learned so much about each other. This was fun!</p>
+      <p>Now, let’s go on our next date. What do you think?</p>
+    </div>
+
+    <!-- Yes Button -->
+    <button id="yes-btn">Yes</button>
+
+    <!-- Message and Image that will be shown after clicking Yes -->
+    <div id="message" style="display: none;">
+      <p>Aww cutie, thank you!</p>
+    </div>
+    <img id="yes-cat-img" src="yes_cat.jpeg" style="display: none;" alt="Yes Cat Image">
+
+    <!-- Maybe Button -->
+    <button id="maybe-btn">Maybe</button>
+
+    <!-- Message and Image that will be shown after clicking Maybe -->
+    <div id="maybe-message" style="display: none;">
+      <p>Na na cutie, this option is not available. Why don't you try the other option?</p>
+    </div>
+    <img id="maybe-cat-img" src="maybe_cat.jpeg" style="display: none;" alt="Maybe Cat Image">
+
+  </div>
+
+  <script>
+    function submitQuiz() {
+      // Check if all questions have been answered
+      const answers = [
+        document.querySelector('input[name="q1"]:checked'),
+        document.querySelector('input[name="q2"]:checked'),
+        document.querySelector('input[name="q3"]:checked'),
+        document.querySelector('input[name="q4"]:checked'),
+        document.querySelector('input[name="q5"]:checked'),
+      ];
+
+      // If any answer is missing, alert the user to answer all questions
+      if (answers.includes(null)) {
+        alert("Please answer all the questions!");
+        return;
+      }
+
+      // Hide the quiz and show the result
+      document.getElementById('quiz').style.display = 'none';
+      document.getElementById('result').style.display = 'block';
+    }
+
+    // Function to handle 'Yes' button click
+    document.getElementById("yes-btn").addEventListener("click", function() {
+      // Show the message and image
+      document.getElementById("message").style.display = "block";  // Make the message visible
+      document.getElementById("yes-cat-img").style.display = "block";  // Make the image visible
+
+      // Call the redirection after a delay of 5 seconds
+      setTimeout(function() {
+        window.location.href = "nextpage.html";  // Replace with your next page URL
+      }, 5000); // 5000 milliseconds = 5 seconds
+    });
+
+    // Function to handle 'Maybe' button click
+    document.getElementById("maybe-btn").addEventListener("click", function() {
+      // Show the "Maybe" message and image
+      document.getElementById("maybe-message").style.display = "block";
+      document.getElementById("maybe-cat-img").style.display = "block";
+    });
+  </script>
+</body>
+</html>

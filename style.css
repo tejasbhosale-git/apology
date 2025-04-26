@@ -1,0 +1,158 @@
+body {
+  background: linear-gradient(to bottom right, #ffe6e6, #ffccff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #5c005c;
+}
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.heart {
+  color: red;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.apology-img {
+  width: 300px;
+  max-width: 80%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.arrow-img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.love-button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #ff4d88;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.love-button:hover {
+  background-color: #e60073;
+}
+
+.message-box {
+  max-width: 800px;
+  margin: 40px auto 20px;
+  padding: 20px;
+  background: #fff0f5;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.apology-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4d004d;
+  text-align: left;
+}
+
+.response-buttons {
+  margin-top: 20px;
+}
+
+.response-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.yes-btn {
+  background-color: #ff4da6;
+  color: white;
+}
+
+.maybe-btn {
+  background-color: #ffd1dc;
+  color: #660033;
+}
+
+.insta-chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #ff66cc;
+  border-radius: 30px;
+  padding: 8px 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+}
+
+.insta-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.insta-text {
+  color: #e60073;
+  font-weight: bold;
+}
+
+.maybe-response {
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffccff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+}
+
+.maybe-cat-img {
+  width: 200px;
+  max-width: 80%;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.yes-response {
+  margin-top: 20px;
+  padding: 20px;
+  background: #e6ccff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(240, 160, 255, 0.3);
+}
+
+.yes-cat-img {
+  width: 200px;
+  max-width: 80%;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sup cutie 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Sup cuite , <span class="heart">❤️</span></h1>
+    <p class="subtitle">sorry for trouble</p>
+    <img src="cat_apology.jpeg" alt="Cute Cat Saying Sorry" class="apology-img"/>
+    <img src="arrow_cat.jpeg" alt="Arrow pointing at button" class="arrow-img"/>
+    <button class="love-button" onclick="showMessage()">Hit me</button>
+
+    <div id="message-box" class="message-box hidden">
+      <p class="apology-text">
+        I’ve been thinking a lot about the other day from very long, wanted to apologize but I thought you should have some space and didn’t want to disturb your busy schedule.<br><br>
+        And I just wanted to say I’m really sorry. I know the date didn’t go the way either of us probably expected, and I take full responsibility for that.<br><br>
+        You didn’t deserve the awkwardness or whatever mess I brought into the moment—I let things slip, and that’s on me. I genuinely wanted to spend time with you and get to know you better, and I hate that it ended up feeling off.<br><br>
+        I’m not perfect, had some reasons to mess that date, can explain.. but I care about how you felt and I really hope we can start fresh, even if it’s just a good conversation to clear the air.<br><br>
+        No pressure—just wanted to be real with you and say I’m sorry.<br><br>
+        Would you like to give this a chance?
+      </p>
+      <div class="response-buttons">
+        <button class="response-btn yes-btn" onclick="showYesResponse()">Yes</button>
+        <button class="response-btn maybe-btn" onclick="showMaybeResponse()">Maybe</button>
+      </div>
+    </div>
+
+    <div id="maybe-response" class="maybe-response hidden">
+      <p>Na na cutie, this option is not available. Why don't you try the other option?</p>
+      <img src="maybe_cat.jpeg" alt="Maybe cat" class="maybe-cat-img"/>
+    </div>
+
+    <div id="yes-response" class="yes-response hidden">
+      <p>Aww cutie, thank you!</p>
+      <img src="yes_cat.gif" alt="Yes cat" class="yes-cat-img"/>
+    </div>
+  </div>
+
+  <!-- Insta Chat Button -->
+  <a href="https://instagram.com/your_instagram" target="_blank" class="insta-chat-btn">
+    <img src="insta_botton.jpeg" alt="Instagram Icon" class="insta-icon"/>
+    <span class="insta-text">To chat on Insta click here</span>
+  </a>
+
+  <!-- Form for capturing user's name -->
+  <form action="https://formspree.io/f/manonezn" method="POST" id="user-form">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required placeholder="Enter your name">
+    <button type="submit" id="submit-button">Submit</button>
+  </form>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message-box').classList.remove('hidden');
+    }
+
+    function showYesResponse() {
+      document.getElementById('yes-response').classList.remove('hidden');
+      
+      // Redirect after 5 seconds
+      setTimeout(function() {
+        window.location.href = "nextpage.html"; // Replace with your next page URL
+      }, 5000); // 5000 milliseconds = 5 seconds
+    }
+
+    function showMaybeResponse() {
+      document.getElementById('maybe-response').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
