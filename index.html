@@ -3,37 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sup cutie 💖</title>
+  <title>Sup Cutie 💖</title>
   <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Sup cuite , <span class="heart">❤️</span></h1>
-    <p class="subtitle">sorry for trouble</p>
+    <h1>Sup Cutie, <span class="heart">❤️</span></h1>
+    <p class="subtitle">sorry for the trouble</p>
     <img src="cat_apology.jpeg" alt="Cute Cat Saying Sorry" class="apology-img"/>
     
-    <button class="love-button" onclick="showMessage()">Hit me</button>
+    <button class="love-button" onclick="showMessage()">Hit Me</button>
 
     <div id="message-box" class="message-box hidden">
       <p class="apology-text">
         I’ve been thinking about that day for so long.
-I just wanted to say sorry for ruining it and wasting your time, and for making it irritating.
-
-I’ve never met a girl like you—not just your beauty, but your personality, gestures, and everything else. You’re just amazing.
-
-And on the other side... I messed everything up. But believe me, that wasn’t me. I don’t know what happened that day. There were reasons, but I don’t want to make excuses.
-
-You understood it all so calmly, and I really admire that.
-
-You didn’t deserve the awkwardness or the mess I brought into the moment—I let things slip, and that’s on me.
-
-I genuinely wanted to spend time with you and get to know you better, and I hate that it ended up feeling off.
-
-But I care about how you felt, and I really hope we can start fresh—even if it’s just a good conversation to clear the air.
-
-No pressure—I just wanted to be real with you and say I’m sorry.
-though wanted to ask u out , bt one try !! , mistakes happen from the humans after all , so will u ?
-
+        I just wanted to say sorry for ruining it and wasting your time, and for making it irritating.
+        I’ve never met a girl like you—not just your beauty, but your personality, gestures, and everything else. You’re just amazing.
+        And on the other side... I messed everything up. But believe me, that wasn’t me. I don’t know what happened that day. There were reasons, but I don’t want to make excuses.
+        You understood it all so calmly, and I really admire that.
+        You didn’t deserve the awkwardness or the mess I brought into the moment—I let things slip, and that’s on me.
+        I genuinely wanted to spend time with you and get to know you better, and I hate that it ended up feeling off.
+        But I care about how you felt, and I really hope we can start fresh—even if it’s just a good conversation to clear the air.
+        No pressure—I just wanted to be real with you and say I’m sorry.
+        Though I wanted to ask you out, but one try!! Mistakes happen from humans after all, so will you?
       </p>
       <div class="response-buttons">
         <button class="response-btn yes-btn" onclick="showYesResponse()">Yes</button>
@@ -43,45 +36,27 @@ though wanted to ask u out , bt one try !! , mistakes happen from the humans aft
 
     <div id="maybe-response" class="maybe-response hidden">
       <p>Na na cutie, this option is not available. Why don't you try the other option?</p>
-      <img src="maybe_cat.jpeg" alt="Maybe cat" class="maybe-cat-img"/>
+      <img src="maybe_cat.jpeg" alt="Maybe Cat" class="maybe-cat-img"/>
     </div>
 
     <div id="yes-response" class="yes-response hidden">
       <p>Aww cutie, thank you!</p>
-      <img src="yes_cat.gif" alt="Yes cat" class="yes-cat-img"/>
+      <img src="yes_cat.gif" alt="Yes Cat" class="yes-cat-img"/>
+      <div class="loader hidden" id="loader"></div>
     </div>
   </div>
 
-  <!-- Insta Chat Button -->
   <a href="https://instagram.com/your_instagram" target="_blank" class="insta-chat-btn">
     <img src="insta_botton.jpeg" alt="Instagram Icon" class="insta-icon"/>
-    <span class="insta-text">To chat on Insta click here</span>
+    <span class="insta-text">Chat on Insta</span>
   </a>
 
-  <!-- Form for capturing user's name -->
   <form action="https://formspree.io/f/manonezn" method="POST" id="user-form">
     <label for="name">Your Name:</label>
     <input type="text" id="name" name="name" required placeholder="Enter your name">
     <button type="submit" id="submit-button">Submit</button>
   </form>
 
-  <script>
-    function showMessage() {
-      document.getElementById('message-box').classList.remove('hidden');
-    }
-
-    function showYesResponse() {
-      document.getElementById('yes-response').classList.remove('hidden');
-      
-      // Redirect after 5 seconds
-      setTimeout(function() {
-        window.location.href = "nextpage.html"; // Replace with your next page URL
-      }, 5000); // 5000 milliseconds = 5 seconds
-    }
-
-    function showMaybeResponse() {
-      document.getElementById('maybe-response').classList.remove('hidden');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
